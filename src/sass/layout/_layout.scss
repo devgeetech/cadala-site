@@ -1,0 +1,18 @@
+.layout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $brand-color-white;
+    
+    font-family: $text-font-stack;
+
+    &__main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    // @include respond-to('ultra-huge') {
+    //     align-items: center;
+    // }
+}

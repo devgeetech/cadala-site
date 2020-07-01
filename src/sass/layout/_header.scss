@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+
+    &__wrap {
+        width: 90%;
+        max-width: $max-width;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            height: 72px;
+            width: 275px;
+        }
+    }
+
+    
+}

@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Segoe UI', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Copy text color
+/// @type Color
+$text-color-primary: #1B1464 !default;
+
+$text-color-navigation: #707070;
+
+/// Main brand color
+/// @type Color
+$brand-color: #1B1464 !default;
+
+/// Secondary text color
+/// @type Color
+$brand-color-white: #FFFFFF !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1440px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'ultra-tiny' : (min-width: 360px),
+  'tiny' : (min-width: 400px),
+  'small': (min-width: 500px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1180px),
+  'ultra-huge': (min-width: 1440px),
+  'mighty': (min-width: 2160px),
+  'ultra-mighty': (min-width: 3840px), 
+) !default;
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

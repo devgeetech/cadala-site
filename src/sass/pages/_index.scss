@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.index {
+    display: flex;
+    justify-content: center;
+
+    &__hero {
+        width: 90%;
+        max-width: $max-width;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5.5rem;
+        padding-bottom: 6rem;
+
+        &__image {
+            width: 100%;
+            margin-right: 4rem;
+            &__img {
+                max-height: 500px;
+            }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+
+            &__head {
+                margin-bottom: 1.5rem;
+                font-size: 53px;
+                font-weight: 700;
+                color: $brand-color;
+            }
+            &__desc {
+                margin-bottom: 2rem;
+                color: $text-color-navigation;
+                font-size: 30px;
+            }
+            &__buttons {
+                display: flex;
+                justify-content: space-between;
+
+                &__button {
+                    width: 48%;
+                    height: 68px;
+                    border: none;
+
+                    &--blue {
+                        background-color: $brand-color;
+                        color: $brand-color-white;
+
+                        &:hover {
+                            background-color: $brand-color-white;
+                            color: $brand-color;
+                            border: solid 3px $brand-color;
+                        }
+                    }
+
+                    &--white {
+                        background-color: $brand-color-white;
+                        color: $brand-color;
+                        border: solid 3px $brand-color;
+
+                        &:hover {
+                            background-color: $brand-color;
+                            color: $brand-color-white;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

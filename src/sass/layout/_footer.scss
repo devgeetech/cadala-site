@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: $brand-color;
+
+    &__wrap {
+        width: 90%;
+        max-width: $max-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__line {
+            width: 100%;
+            height: 3px;
+            background-color: $brand-color;
+            margin-bottom: 70px;
+        }
+
+        &__content{
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            &__left {
+                display: flex;
+
+                &__column {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 2rem;
+
+                    &__head {
+                        margin-bottom: 40px;
+                        font-size: 34px;
+                        font-weight: 700;
+                        text-shadow: 0 0 1px $brand-color;
+                    }
+                    &__links {
+                        display: flex;
+                        flex-direction: column;
+
+                        &__link {
+                            margin-bottom: 25px;
+                            font-size: 23px;
+                        }
+                    }
+                }
+            }
+            &__right {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+
+                &__logo {
+                    margin-bottom: 20px;
+
+                    &__img {
+                        width: 275px;
+                        height: 72px;
+                    }
+                }
+
+                &__tagline {
+                    font-size: 23px;
+                    margin-bottom: 20px;
+                }
+
+                &__mail {
+                    font-size: 23px;
+                }
+            }
+        }
+        &__rights {
+            margin-top: 3rem;
+            font-size: 17px;
+            padding-bottom: 1rem;
+        }
+    }
+}
