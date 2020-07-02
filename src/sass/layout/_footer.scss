@@ -16,20 +16,27 @@
         align-items: center;
 
         &__line {
-            width: 100%;
+            width: 95%; 
             height: 3px;
             background-color: $brand-color;
             margin-bottom: 70px;
         }
 
         &__content{
-            width: 100%;
+            width: 90%;
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
+            flex-direction: column;
+
+            @include respond-to('medium'){
+                width: 100%;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
 
             &__left {
                 display: flex;
+                flex-wrap: wrap;
 
                 &__column {
                     display: flex;

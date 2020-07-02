@@ -30,15 +30,15 @@
     padding: 12px 28px;
     color: $text-color-navigation;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: color 200ms ease;
     
 
-    @include respond-to('medium') {
-        font-size: 16px;
-        padding: 24px 28px;
-        margin-bottom: 0;
-    }
+    // @include respond-to('medium') {
+    //     font-size: 16px;
+    //     padding: 24px 28px;
+    //     margin-bottom: 0;
+    // }
 }
 
 .navigation-item a:hover {
