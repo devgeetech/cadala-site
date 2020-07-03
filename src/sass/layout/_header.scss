@@ -4,9 +4,13 @@
 
 .header {
     width: 100%;
-    margin: 2rem 0;
-    display: flex;
+    margin: 1rem 0 2rem 0;
+    display: flex; 
     justify-content: center;
+
+    @include respond-to('medium'){
+        margin: 2rem 0;
+    }
 
     &__wrap {
         width: 90%;
