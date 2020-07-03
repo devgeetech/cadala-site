@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
 import heroImg from '../images/hero-img.svg'
+import subImg from '../images/sub-img.svg'
 
 const IndexPage = () => (
   <Layout>
@@ -43,7 +44,6 @@ const IndexPage = () => (
                 Export private labelled products and expand your business empire!
               </div>
             </div>
-
             <div className="index__vendor__content__form">
               <form className="index__vendor__content__form__actual">
                 <div className="index__vendor__content__form__actual__fields">
@@ -101,7 +101,38 @@ const IndexPage = () => (
               </form>
             </div>
           </div>
-        </div>   
+        </div> 
+
+        <div className="index__subscribe">
+          <div className="index__subscribe__image">
+            <img src={subImg} alt="Subscribe" className="index__subscribe__image__img" />
+          </div>
+          <div className="index__subscribe__text">
+            <div className="index__subscribe__text__head">
+              B2B Consumer? <br/>
+              Get Notified!
+            </div>
+            <div className="index__subscribe__text__desc">
+              If you are a B2B consumer, be the first ones to know when our marketplace goes live! 
+            </div>
+            <div className="index__subscribe__text__form">    
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder="Email"
+                  aria-label="Email Field" 
+                  className="index__subscribe__text__form__input"/>
+                <input 
+                  type="submit"
+                  value="Notify Me"
+                  readOnly
+                  className="index__subscribe__text__form__submit" />
+            </div>
+            <div className="index__subscribe__text__tnc">
+              *By subscribing you agree to our terms and conditions &amp; privacy policy
+            </div>
+          </div>
+        </div>  
 
 
     </div>
