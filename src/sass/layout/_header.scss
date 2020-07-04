@@ -21,6 +21,8 @@
         align-items: center;
 
         &__menu {
+            border: none;
+            background-color: transparent;
 
             @include respond-to('medium'){
                 display: none;

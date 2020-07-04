@@ -1,0 +1,134 @@
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    background-color: $brand-color-white;
+    transition: transform 0.3s ease-out;
+    z-index: 20;
+
+    @include respond-to('medium') {
+        display: none;
+    }    
+
+    &__close-icon {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    &__logo {
+        margin: 5rem 0 2.5rem 0;
+        display: flex;
+        justify-content: center;
+
+        @include respond-to('small') {
+            margin: 2rem 0;
+        }
+    }
+
+    &--open {
+        transform: translateX(0);
+    }
+    
+    &--close {
+        animation: hide 1s linear 1s 1 normal forwards;
+        transform: translateX(-100%);
+    }
+
+    &--close-rtl {
+        animation: hide 1s linear 1s 1 normal forwards;
+        transform: translateX(100%);
+    } 
+}
+
+.side-search {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 1rem; 
+    transition: transform 0.3s ease-out; 
+    background-color: $brand-color-white;
+    z-index: 10; 
+    display: flex;
+    align-items: center;  
+
+    &__main {  
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #00000021; 
+        z-index: 10;
+        padding-bottom: 6px;
+
+        &__icon {
+            border: none;
+            background: none;
+            padding: 0 0.5rem;  
+
+            &__img {
+                opacity: 0.5; 
+                height: 18px;
+            }
+        }
+
+        &__input {
+            width: 90%;
+             
+            &__real{
+                border: none;
+                width: 100%;
+                background-color: $brand-color-white;
+            }
+            
+            &__real:focus {
+                -webkit-appearance: none;
+                outline: none;
+            }
+        } 
+
+    }
+
+    &--open {
+        transform: translateX(0);
+    }
+    
+    &--close { 
+        animation: hide 1s linear 1s 1 normal forwards;
+        transform: translateX(100%);
+    }
+
+    &--close-rtl {
+        animation: hide 1s linear 1s 1 normal forwards;
+        transform: translateX(-100%);
+    }
+
+    @include respond-to('medium') {
+        display: none;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }   
+
+    100% {
+        opacity: 0;
+    }
+}

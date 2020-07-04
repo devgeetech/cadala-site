@@ -25,6 +25,16 @@
             margin-bottom: 0;
             margin-right: 4rem;
         }
+
+        &--pricing {
+            order: 0;
+
+            @include respond-to('medium'){
+                order: 1;
+                margin-left: 4rem; 
+            }
+        }
+        
             
         &__img {
             max-height: 500px;
@@ -44,6 +54,15 @@
 
             @include respond-to('medium'){
                 font-size: 38px;
+            }
+
+            &--2{
+                margin-top: 2rem;
+                font-size: 18px;
+
+                @include respond-to('medium'){
+                    font-size: 28px;
+                }
             }
         }
 
