@@ -19,7 +19,7 @@ const HowPage = () => {
                         <div className="how__text__head">
                             How It Works
                         </div>
-                        <div className="howt__text__desc">
+                        <div className="how__text__desc">
                             The sellers join to our free tier at this time. The free tier is limited but would give sellers a great possibility to run their business successfully. Learn about our free tier in the pricing page.
                             <br/><br/>
                             We'll be introducing premium tiers to which the sellers can switch or have as a compliment for their quality service (based on evaluation). 
