@@ -21,9 +21,9 @@ module.exports = {
         name: `Cadala`,
         short_name: `Cadala`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#FFFFFF`,
+        theme_color: `#1B1464`,
+        display: `fullscreen`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
