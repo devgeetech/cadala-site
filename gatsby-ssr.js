@@ -12,7 +12,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import fetch from 'isomorphic-fetch';
 
 const client = new ApolloClient({
-  uri: process.env.GATSBY_API_LINK,
+  uri: 'https://cadala-site.herokuapp.com/v1/graphql',
   fetch,
 });
 
