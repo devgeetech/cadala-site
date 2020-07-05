@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import cadalaLogo from '../../../images/Logo.svg'
 
@@ -17,9 +18,9 @@ const Footer = () => {
                                 Links
                             </div>
                             <div className="footer__wrap__content__left__column__links">
-                                <div className="footer__wrap__content__left__column__links__link">About Us</div>
-                                <div className="footer__wrap__content__left__column__links__link">How It Works</div>
-                                <div className="footer__wrap__content__left__column__links__link">Pricing</div>
+                                <Link to="/about" className="footer__wrap__content__left__column__links__link">About Us</Link>
+                                <Link to="/how-it-works" className="footer__wrap__content__left__column__links__link">How It Works</Link>
+                                <Link to="/pricing" className="footer__wrap__content__left__column__links__link">Pricing</Link>
                             </div>
                         </div>
                         <div className="footer__wrap__content__left__column">

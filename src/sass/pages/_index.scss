@@ -78,6 +78,15 @@
                     padding: 12px 0;
                     // height: 32px;
                     border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    text-decoration: none;
+
+                    &:hover{
+                        text-decoration: none;
+                    }
 
                     @include respond-to('medium'){
                         // height: 46px;
