@@ -118,8 +118,8 @@ const IndexPage = () => {
                 Indian manufactured products to the world.
               </div>
               <div className="index__hero__text__desc">
-                Businesses are changing, the world is changing. 
-                Start to explore new possibilities of B2B businesses. 
+                Businesses are evolving - causing tectonic shifts in the economic landscape. 
+                Explore new possibilities for B2B businesses.
               </div>
               <div className="index__hero__text__buttons">
                 <Link to='/#vendor' className="index__hero__text__buttons__button index__hero__text__buttons__button--blue">
@@ -140,11 +140,10 @@ const IndexPage = () => {
                   Join as a B2B Merchant
                 </div>
                 <div className="index__vendor__content__text__desc">
-                  Join a revolutionary marketplace that showcases the many variety of things 
-                  Indian manufacturers offer.<br/> <br/>
-
-                  Get more orders and reach with new business models like dropshipping. 
-                  Export private labelled products and expand your business empire!
+                  Join a revolutionary marketplace that showcases your products to the entire world! 
+                  <br/> <br/>
+                  Get more orders and grow your customer base with new business models like dropshipping. 
+                  Export private labeled products and expand your global presence. 
                 </div>
               </div>
               <div className="index__vendor__content__form">
@@ -183,10 +182,30 @@ const IndexPage = () => {
                         style={{backgroundColor: "#1B1464"}}
                         required>
                           <option value="">Category</option>
-                          <option value="Electronics">Electronics</option>
-                          <option value="Apparel">Apparel</option>
-                          <option value="Household">Household</option>
-                          <option value="Industrial Equipment">Industrial Equipment</option>
+                          <option value='apparel &amp; accessories'>Apparel &amp; Accessories</option>
+                          <option value='automobiles &amp; motorcycles'>Automobiles &amp; Motorcycles</option>
+                          <option value='baby products'>Baby Products</option>
+                          <option value='beauty &amp; health'>Beauty &amp; Health</option>
+                          <option value='computers &amp; networking'>Computers &amp; Networking</option>
+                          <option value='consumer electronics'>Consumer Electronics</option>
+                          <option value='electrical equipment &amp; supplies'>Electrical Equipment &amp; Supplies</option>
+                          <option value='electronic components &amp; supplies'>Electronic Components &amp; Supplies</option>
+                          <option value='furniture'>Furniture</option>
+                          <option value='home &amp; garden'>Home &amp; Garden</option>
+                          <option value='home appliances'>Home Appliances</option>
+                          <option value='home improvement'>Home Improvement</option>
+                          <option value='industry &amp; business'>Industry &amp; Business</option>
+                          <option value='jewelry'>Jewelry</option>
+                          <option value='lights &amp; lighting'>Lights &amp; Lighting</option>
+                          <option value='luggage &amp; bags'>Luggage &amp; Bags</option>
+                          <option value='office &amp; school supplies'>Office &amp; School Supplies</option>
+                          <option value='phones &amp; telecommunications'>Phones &amp; Telecommunications</option>
+                          <option value='shoes'>Shoes</option>
+                          <option value='sports &amp; entertainment'>Sports &amp; Entertainment</option>
+                          <option value='toys &amp; hobbies'>Toys &amp; Hobbies</option>
+                          <option value='watches'>Watches</option>
+                          <option value='food'>Food</option>
+                          <option value='gifts &amp; crafts'>Gifts &amp; Crafts</option>
                       </select>
                       {/* <input 
                         type="text" 

@@ -20,9 +20,9 @@ const AboutPage = () => {
                             About Cadala
                         </div>
                         <div className="about__text__desc">
-                            Cadala is all about giving Indian manufacturers exposure to the international demands and opening new doors for them to sell their products to a variety of customers.
+                            Cadala plans to help those who are on the dark side of the e-commerce revolution. Equipping manufacturers with the capabilities to tackle the rapidly advancing world and letting the world in on the wonderful array of Indian products are the prime focuses of Cadala. 
                             <br/><br/>
-                            The dropshipping model of business has taken the market by storm and India, one of the best producers of the world is nearly absent! We are here to bridge the gap between B2B consumers and sellers.
+                            Using our refined dropshipping capabilities, we intend to bridge the gap between B2B consumers and sellers. We strive to build trust and confidence between the elements of the marketplace.
                         </div>
                     </div>
                 </div>

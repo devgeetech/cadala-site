@@ -20,11 +20,11 @@ const HowPage = () => {
                             How It Works
                         </div>
                         <div className="how__text__desc">
-                            The sellers join to our free tier at this time. The free tier is limited but would give sellers a great possibility to run their business successfully. Learn about our free tier in the pricing page.
+                            As a seller, you can list a limited number of products on Cadala for free! Cadala offers a premium plan that offers more product listings and lesser commission rates.
                             <br/><br/>
-                            We'll be introducing premium tiers to which the sellers can switch or have as a compliment for their quality service (based on evaluation). 
+                            Consumers can place orders on Cadala or set up their technology stack to enable the integrated dropshipping system. Sellers and consumers can use our revolutionary dashboard to manage their transactions and technical integrations.
                             <br/><br/>
-                            The consumers can register as B2B wholesale buyers or as dropshippers. Dropshippers will have a dashboard from where they can import products to their store. 
+                            On Cadala, your transactions will be as seamless as it can be. Dropshipping is embedded in its core so you can say goodbye to all those tricky plugins and extensions.
                         </div>
                     </div>
                 </div>
