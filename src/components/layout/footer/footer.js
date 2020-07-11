@@ -1,10 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
+
+import LangContext from '../../../context/langContext'
+import langs from '../../../langs/footerLang'
 
 import cadalaLogo from '../../../images/Logo.svg'
 
 
 const Footer = () => {
+
+    const context = useContext(LangContext);
+    const lang = langs[context.currLang]
+
     return(
         <div className="footer">
             <div className="footer__wrap">
@@ -15,27 +22,27 @@ const Footer = () => {
                     <div className="footer__wrap__content__left">
                         <div className="footer__wrap__content__left__column">
                             <div className="footer__wrap__content__left__column__head">
-                                Links
+                                {lang.links}
                             </div>
                             <div className="footer__wrap__content__left__column__links">
-                                <Link to="/about" className="footer__wrap__content__left__column__links__link">About Us</Link>
-                                <Link to="/how-it-works" className="footer__wrap__content__left__column__links__link">How It Works</Link>
-                                <Link to="/pricing" className="footer__wrap__content__left__column__links__link">Pricing</Link>
+                                <Link to="/about" className="footer__wrap__content__left__column__links__link">{lang.about}</Link>
+                                <Link to="/how-it-works" className="footer__wrap__content__left__column__links__link">{lang.howItWorks}</Link>
+                                <Link to="/pricing" className="footer__wrap__content__left__column__links__link">{lang.pricing}</Link>
                             </div>
                         </div>
                         <div className="footer__wrap__content__left__column">
                             <div className="footer__wrap__content__left__column__head">
-                                Learn Market
+                                {lang.learnMarket}
                             </div>
                             <div className="footer__wrap__content__left__column__links">
-                                <div className="footer__wrap__content__left__column__links__link">B2B Online Supply</div>
-                                <div className="footer__wrap__content__left__column__links__link">Dropshipping</div>
-                                <div className="footer__wrap__content__left__column__links__link">Exporting</div>
+                                <div className="footer__wrap__content__left__column__links__link">{lang.learnMarket}</div>
+                                <div className="footer__wrap__content__left__column__links__link">{lang.dropshipping}</div>
+                                <div className="footer__wrap__content__left__column__links__link">{lang.exporting}</div>
                             </div>
                         </div>
                         <div className="footer__wrap__content__left__column">
                             <div className="footer__wrap__content__left__column__head">
-                                Policies
+                                {lang.policies}
                             </div>
                             <div className="footer__wrap__content__left__column__links">
                                 <div className="footer__wrap__content__left__column__links__link">Terms &amp; Conditions</div>

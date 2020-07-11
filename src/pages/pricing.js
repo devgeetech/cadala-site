@@ -1,4 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
+
+import LangContext from '../context/langContext'
+import langs from '../langs/pricingLang'
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -6,6 +9,9 @@ import SEO from "../components/seo"
 import pricingImg from '../images/pricing-img.svg'
 
 const AboutPage = () => {
+
+    const context = useContext(LangContext);
+    const lang = langs[context.currLang]
 
     return(
         <Layout>
@@ -17,16 +23,16 @@ const AboutPage = () => {
                     </div>
                     <div className="about__text">
                         <div className="about__text__head">
-                            Start for free!
+                            {lang.head}
                         </div>
                         <div className="about__text__desc">
-                            The first 15 product listings are free. Beyond that, the seller pays Rs. 55 per listing. Cadala charges an 8% commission on every order. All dropshipping integrations are available for free. An account can have a single user who can enjoy all these features for free - forever. 
+                            {lang.hero}
                         </div>
                         <div className="about__text__head about__text__head--2">
-                            Premium
+                            {lang.premiumHead}
                         </div>
                         <div className="about__text__desc">
-                            Users on premium plans enjoy more free listings, lesser commission rates, ability to add more staff and departments, and more!
+                            {lang.premiumText}
                         </div>
                     </div>
                 </div>

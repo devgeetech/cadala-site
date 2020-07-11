@@ -17,6 +17,20 @@
         display: none;
     }    
 
+    &--open {
+        transform: translateX(0);
+    }
+    
+    &--close {
+        animation: hide 1s linear 1s 1 normal forwards;
+        transform: translateX(-100%);
+    }
+
+    &--close-rtl {
+        animation: hide 1s linear 1s 1 normal forwards;
+        transform: translateX(100%);
+    } 
+
     &__close-icon {
         position: absolute;
         top: 2rem;
@@ -38,86 +52,31 @@
         }
     }
 
-    &--open {
-        transform: translateX(0);
-    }
-    
-    &--close {
-        animation: hide 1s linear 1s 1 normal forwards;
-        transform: translateX(-100%);
-    }
-
-    &--close-rtl {
-        animation: hide 1s linear 1s 1 normal forwards;
-        transform: translateX(100%);
-    } 
-}
-
-.side-search {
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    padding: 1rem; 
-    transition: transform 0.3s ease-out; 
-    background-color: $brand-color-white;
-    z-index: 10; 
-    display: flex;
-    align-items: center;  
-
-    &__main {  
+    &__lang-select {
         display: flex;
-        width: 100%;
-        border-bottom: 1px solid #00000021; 
-        z-index: 10;
-        padding-bottom: 6px;
+        flex-direction: column;
+        align-items: center;
 
-        &__icon {
-            border: none;
-            background: none;
-            padding: 0 0.5rem;  
-
-            &__img {
-                opacity: 0.5; 
-                height: 18px;
-            }
+        &__head {
+            font-size: 14px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
-        &__input {
-            width: 90%;
-             
-            &__real{
-                border: none;
-                width: 100%;
-                background-color: $brand-color-white;
-            }
-            
-            &__real:focus {
-                -webkit-appearance: none;
+        &__dropdown {
+            border: none;
+            font-size: 14px; 
+
+            &:focus {
                 outline: none;
             }
-        } 
-
+        }
     }
 
-    &--open {
-        transform: translateX(0);
-    }
     
-    &--close { 
-        animation: hide 1s linear 1s 1 normal forwards;
-        transform: translateX(100%);
-    }
-
-    &--close-rtl {
-        animation: hide 1s linear 1s 1 normal forwards;
-        transform: translateX(-100%);
-    }
-
-    @include respond-to('medium') {
-        display: none;
-    }
 }
+
+
 
 @keyframes hide {
     0% {

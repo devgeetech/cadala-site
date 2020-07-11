@@ -1,7 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link } from 'gatsby'
 import { useMutation } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+
+import LangContext from '../context/langContext'
+import langs from '../langs/indexLang'
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -36,7 +39,9 @@ const ADD_SUB= gql`
 
 const IndexPage = () => {
 
-  
+  const context = useContext(LangContext);
+
+  const lang = langs[context.currLang]
 
   const [formData, updForm] = useState({
     name: "",
@@ -101,10 +106,6 @@ const IndexPage = () => {
     }, 2000)
   }
 
-  // if(mutationError){
-  //   console.log(mutationError)
-  // }
-
   return(
     <Layout>
       <SEO title="Home" />
@@ -115,18 +116,17 @@ const IndexPage = () => {
             </div>
             <div className="index__hero__text">
               <div className="index__hero__text__head">
-                Indian manufactured products to the world.
+                {lang.heroMain}
               </div>
               <div className="index__hero__text__desc">
-                Businesses are evolving - causing tectonic shifts in the economic landscape. 
-                Explore new possibilities for B2B businesses.
+                {lang.heroSub}
               </div>
               <div className="index__hero__text__buttons">
                 <Link to='/#vendor' className="index__hero__text__buttons__button index__hero__text__buttons__button--blue">
-                  Join as Merchant
+                  {lang.joinAsMerchant}
                 </Link>
                 <Link to='/#subscriber' className="index__hero__text__buttons__button index__hero__text__buttons__button--white">
-                  Get Notified
+                  {lang.getNotified}
                 </Link>
               </div>
             </div>
@@ -137,13 +137,12 @@ const IndexPage = () => {
             <div className="index__vendor__content">
               <div className="index__vendor__content__text">
                 <div className="index__vendor__content__text__head">
-                  Join as a B2B Merchant
+                  {lang.joinAsB2BMerchant}
                 </div>
                 <div className="index__vendor__content__text__desc">
-                  Join a revolutionary marketplace that showcases your products to the entire world! 
+                  {lang.b2bMerchHero1}
                   <br/> <br/>
-                  Get more orders and grow your customer base with new business models like dropshipping. 
-                  Export private labeled products and expand your global presence. 
+                  {lang.b2bMerchHero2}
                 </div>
               </div>
               <div className="index__vendor__content__form">
@@ -152,7 +151,7 @@ const IndexPage = () => {
                     <div className="index__vendor__content__form__actual__fields__column">
                       <input 
                         type="text" 
-                        placeholder="Name" 
+                        placeholder={lang.name} 
                         name="name"
                         onChange={handleInputChange}
                         aria-label="Name field" 
@@ -160,7 +159,7 @@ const IndexPage = () => {
                         required/>
                       <input 
                         type="text" 
-                        placeholder="Company Name" 
+                        placeholder={lang.companyName} 
                         name="company"
                         onChange={handleInputChange}
                         aria-label="Company field" 
@@ -168,7 +167,7 @@ const IndexPage = () => {
                         required/> 
                       <input 
                         type="text" 
-                        placeholder="Address Line 1" 
+                        placeholder={lang.address1}
                         name="address1"
                         onChange={handleInputChange}
                         aria-label="Address 1 field" 
@@ -181,7 +180,7 @@ const IndexPage = () => {
                         className="index__vendor__content__form__actual__fields__column__input"
                         style={{backgroundColor: "#1B1464"}}
                         required>
-                          <option value="">Category</option>
+                          <option value="">{lang.category}</option>
                           <option value='apparel &amp; accessories'>Apparel &amp; Accessories</option>
                           <option value='automobiles &amp; motorcycles'>Automobiles &amp; Motorcycles</option>
                           <option value='baby products'>Baby Products</option>
@@ -218,7 +217,7 @@ const IndexPage = () => {
                     <div className="index__vendor__content__form__actual__fields__column">
                       <input 
                         type="text" 
-                        placeholder="City" 
+                        placeholder={lang.city}
                         name="city"
                         onChange={handleInputChange}
                         aria-label="City field" 
@@ -231,7 +230,7 @@ const IndexPage = () => {
                         className="index__vendor__content__form__actual__fields__column__input"
                         style={{backgroundColor: "#1B1464"}}
                         required>
-                          <option value="">State</option>
+                          <option value="">{lang.state}</option>
                           <option value="Andhra Pradesh">Andhra Pradesh</option>
                           <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                           <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -271,7 +270,7 @@ const IndexPage = () => {
                       </select> 
                       <input 
                         type="tel" 
-                        placeholder="Phone" 
+                        placeholder={lang.phone} 
                         name="phone"
                         onChange={handleInputChange}
                         aria-label="Phone field" 
@@ -279,7 +278,7 @@ const IndexPage = () => {
                         required/>
                       <input 
                         type="email" 
-                        placeholder="Email"
+                        placeholder={lang.email}
                         name="email" 
                         onChange={handleInputChange}
                         aria-label="Email field" 
@@ -288,18 +287,22 @@ const IndexPage = () => {
                     </div>
                   </div>
                   <div className="index__vendor__content__form__actual__submit">
-                    <input type="submit" className="index__vendor__content__form__actual__submit__button"/>
+                    <input 
+                      type="submit" 
+                      value={lang.submit}
+                      readOnly
+                      className="index__vendor__content__form__actual__submit__button"/>
                   </div>
 
                   <div style={modalStyle}>
                     {mutationLoading ? 
-                      <p>Loading...</p> : mutationError ? 
-                        <p>Something went wrong :(</p> : mutationData ? 
-                          <p>Submission Successful!</p> : null}    
+                      <p>{lang.loading}</p> : mutationError ? 
+                        <p>{lang.somethingWentWrong}</p> : mutationData ? 
+                          <p>{lang.submissionSuccess}</p> : null}    
                   </div>
 
                   <div className="index__vendor__content__form__actual__tnc">
-                    *By joining you agree to our terms and conditions &amp; privacy policy
+                    {lang.agreeJoinPrivacyPolicy}
                   </div>
                 </form>
               </div>
@@ -312,37 +315,37 @@ const IndexPage = () => {
             </div>
             <div className="index__subscribe__text">
               <div className="index__subscribe__text__head">
-                B2B Consumer? <br/>
-                Get Notified!
+                {lang.b2bConsumer} <br/>
+                {lang.getNotified}!
               </div>
               <div className="index__subscribe__text__desc">
-                If you are a B2B consumer, be the first ones to know when our marketplace goes live! 
+                {lang.b2bConsumerHero}
               </div>
               {/* <div className="index__subscribe__text__form">   */}
                 <form onSubmit={handleSubscriptionSubmit} className="index__subscribe__text__form">
                   <input 
                       type="email" 
                       name="email" 
-                      placeholder="Email"
+                      placeholder={lang.email}
                       onChange={handleSubEmailChange}
                       aria-label="Email Field" 
                       className="index__subscribe__text__form__input"
                       required/>
                   <input 
                       type="submit"
-                      value="Notify Me"
+                      value={lang.notifyMe}
                       readOnly
                       className="index__subscribe__text__form__submit" />            
                 </form>
               {/* </div> */}
               <div style={modalStyle2}>
                 {mutationLoading2 ? 
-                  <p>Loading...</p> : mutationError2 ? 
-                    <p>Something went wrong :(</p> : mutationData2 ? 
-                      <p>Subscribed!</p> : null}             
+                  <p>{lang.loading}</p> : mutationError2 ? 
+                    <p>{lang.somethingWentWrong}</p> : mutationData2 ? 
+                      <p>{lang.subscribed}</p> : null}             
               </div>
               <div className="index__subscribe__text__tnc">
-                *By subscribing you agree to our terms and conditions &amp; privacy policy
+                {lang.agreeSubPrivacyPolicy}
               </div>
             </div>
           </div>                

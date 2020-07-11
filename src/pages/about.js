@@ -1,4 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
+
+import LangContext from '../context/langContext'
+import langs from '../langs/aboutLang'
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -6,6 +9,9 @@ import SEO from "../components/seo"
 import aboutImg from '../images/about-img.svg'
 
 const AboutPage = () => {
+
+    const context = useContext(LangContext);
+    const lang = langs[context.currLang]
 
     return(
         <Layout>
@@ -17,12 +23,12 @@ const AboutPage = () => {
                     </div>
                     <div className="about__text">
                         <div className="about__text__head">
-                            About Cadala
+                            {lang.head}
                         </div>
                         <div className="about__text__desc">
-                            Cadala plans to help those who are on the dark side of the e-commerce revolution. Equipping manufacturers with the capabilities to tackle the rapidly advancing world and letting the world in on the wonderful array of Indian products are the prime focuses of Cadala. 
+                            {lang.hero1}
                             <br/><br/>
-                            Using our refined dropshipping capabilities, we intend to bridge the gap between B2B consumers and sellers. We strive to build trust and confidence between the elements of the marketplace.
+                            {lang.hero2}
                         </div>
                     </div>
                 </div>

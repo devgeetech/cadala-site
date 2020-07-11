@@ -6,10 +6,13 @@
 
 // You can delete this file if you're not using it
 
-import React from "react"
 import ApolloClient from 'apollo-boost';
+import React from "react"
+import GlobalState from "./src/context/GlobalState"
 import { ApolloProvider } from '@apollo/react-hooks';
 import fetch from 'isomorphic-fetch';
+
+import "./src/sass/main.scss"
 
 const client = new ApolloClient({
   uri: 'https://cadala-site.herokuapp.com/v1/graphql',
@@ -17,5 +20,9 @@ const client = new ApolloClient({
 });
 
 export const wrapRootElement = ({ element }) => (
-    <ApolloProvider client={client}>{element}</ApolloProvider>
+    <GlobalState>
+      <ApolloProvider client={client}>
+        {element}
+      </ApolloProvider>
+    </ GlobalState>
   )

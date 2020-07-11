@@ -1,4 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
+
+import LangContext from '../context/langContext'
+import langs from '../langs/howItWorksLang'
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -6,6 +9,9 @@ import SEO from "../components/seo"
 import howImg from '../images/how-img.svg'
 
 const HowPage = () => {
+
+    const context = useContext(LangContext);
+    const lang = langs[context.currLang]
 
     return(
         <Layout>
@@ -17,14 +23,14 @@ const HowPage = () => {
                     </div>
                     <div className="how__text">
                         <div className="how__text__head">
-                            How It Works
+                            {lang.head}
                         </div>
                         <div className="how__text__desc">
-                            As a seller, you can list a limited number of products on Cadala for free! Cadala offers a premium plan that offers more product listings and lesser commission rates.
+                            {lang.hero1}
                             <br/><br/>
-                            Consumers can place orders on Cadala or set up their technology stack to enable the integrated dropshipping system. Sellers and consumers can use our revolutionary dashboard to manage their transactions and technical integrations.
+                            {lang.hero2}
                             <br/><br/>
-                            On Cadala, your transactions will be as seamless as it can be. Dropshipping is embedded in its core so you can say goodbye to all those tricky plugins and extensions.
+                            {lang.hero3}
                         </div>
                     </div>
                 </div>

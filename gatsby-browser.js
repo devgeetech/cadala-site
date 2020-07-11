@@ -8,6 +8,7 @@
 
 import ApolloClient from 'apollo-boost';
 import React from "react"
+import GlobalState from "./src/context/GlobalState"
 import { ApolloProvider } from '@apollo/react-hooks';
 import fetch from 'isomorphic-fetch';
 
@@ -19,5 +20,9 @@ const client = new ApolloClient({
 });
 
 export const wrapRootElement = ({ element }) => (
-    <ApolloProvider client={client}>{element}</ApolloProvider>
+    <GlobalState>
+      <ApolloProvider client={client}>
+        {element}
+      </ApolloProvider>
+    </ GlobalState>
   )
